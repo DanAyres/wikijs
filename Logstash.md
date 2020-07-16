@@ -2,7 +2,7 @@
 title: Logstash
 description: Using logstash to pasre Symetrica log data
 published: true
-date: 2020-07-16T16:41:00.659Z
+date: 2020-07-16T16:45:25.779Z
 tags: elastic search, logstash
 editor: markdown
 ---
@@ -18,7 +18,7 @@ editor: markdown
 
 ![basic_logstash_pipeline.png](/basic_logstash_pipeline.png)
 
-The aim of this tutorial is to learn how to ingest longterm health records from Symetrica's detector subsystem. Ultimately we will parse the health records and send data (JSON) to logstash via tcp and then use logstash to output directly to elasticsearch. To learn all of the techniques required, we will invoke logstash directly from the command line (using a bash script) and illustrate these techiques using two very simple data sets. An overview is given below:
+The aim of this tutorial is to learn how to ingest longterm health records from Symetrica's detector subsystem. Ultimately we will parse the health records with Python and send data (JSON) to logstash via tcp using logstash to output directly to elasticsearch. To learn all of the techniques required, we will invoke logstash directly from the command line (using a bash script) and illustrate these techiques using two very simple data sets. An overview is given below:
 
 - Running logstash: Invoking logstash from the command line and normal operation
 - Data set 1 (JSON events in a text file)
@@ -119,3 +119,7 @@ https://pypi.org/project/python3-logstash/
 More Tcp comms in pyrhon
 https://wiki.python.org/moin/TcpCommunication
 https://realpython.com/python-sockets/
+
+Little logstash lessons:
+https://www.elastic.co/blog/little-logstash-lessons-part-using-grok-mutate-type-data
+https://www.elastic.co/blog/logstash_lesson_elasticsearch_mapping
