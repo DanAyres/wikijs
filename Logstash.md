@@ -2,7 +2,7 @@
 title: Logstash
 description: Using logstash to pasre Symetrica log data
 published: true
-date: 2020-07-16T16:53:10.751Z
+date: 2020-07-16T16:55:21.974Z
 tags: elastic search, logstash
 editor: markdown
 ---
@@ -29,6 +29,22 @@ The aim of this tutorial is to learn how to ingest longterm health records from 
 - Reading JSON from a file and outputing to standard output
 
 ## Useful Resources
+
+Getting started with [logstash](https://www.elastic.co/blog/a-practical-introduction-to-logstash).
+
+Streaming data from python using sockets:
+https://docs.python.org/3/howto/sockets.html
+
+Example logstash.conf for socket connectinos:
+https://pypi.org/project/python3-logstash/
+
+More Tcp comms in python
+https://wiki.python.org/moin/TcpCommunication
+https://realpython.com/python-sockets/
+
+Little logstash lessons:
+https://www.elastic.co/blog/little-logstash-lessons-part-using-grok-mutate-type-data
+https://www.elastic.co/blog/logstash_lesson_elasticsearch_mapping
 
 # Running logstash
 
@@ -113,20 +129,4 @@ The -N flag will close the connection when the end of file (EOF) is reached.
 
 ## Resources
 
-Getting started with [logstash](https://www.elastic.co/blog/a-practical-introduction-to-logstash).
 
-
-
-Streaming data from python using sockets:
-https://docs.python.org/3/howto/sockets.html
-
-Example logstash.conf for socket connectinos:
-https://pypi.org/project/python3-logstash/
-
-More Tcp comms in pyrhon
-https://wiki.python.org/moin/TcpCommunication
-https://realpython.com/python-sockets/
-
-Little logstash lessons:
-https://www.elastic.co/blog/little-logstash-lessons-part-using-grok-mutate-type-data
-https://www.elastic.co/blog/logstash_lesson_elasticsearch_mapping
