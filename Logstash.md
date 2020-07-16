@@ -2,7 +2,7 @@
 title: Logstash
 description: Using logstash to pasre Symetrica log data
 published: true
-date: 2020-07-16T16:32:37.387Z
+date: 2020-07-16T16:41:00.659Z
 tags: elastic search, logstash
 editor: markdown
 ---
@@ -20,12 +20,11 @@ editor: markdown
 
 The aim of this tutorial is to learn how to ingest longterm health records from Symetrica's detector subsystem. Ultimately we will parse the health records and send data (JSON) to logstash via tcp and then use logstash to output directly to elasticsearch. To learn all of the techniques required, we will invoke logstash directly from the command line (using a bash script) and illustrate these techiques using two very simple data sets. An overview is given below:
 
+- Running logstash: Invoking logstash from the command line and normal operation
 - Data set 1 (JSON events in a text file)
-* 
+- Reading JSON from a file and outputing to standard output
 
-
-
-## Reading JSON-formatted text from files 
+## Running logstash
 
 Make sure logstash is installed. For the purposes of testing, we will be invoking logstash directly to debug the configuration.  The following bash script is used to invoke logstash:
 ```
@@ -41,6 +40,11 @@ DATA_PATH=$PROJECT_ROOT/data
 $exec -r -f $CONFIG_PATH --path.settings $SETTINGS_DIR -l $LOG_PATH --path.data $DATA_PATH --log.level "info"
 ```
 For more information regarding the command line arguments to logstash see [here]([https://www.elastic.co/guide/en/logstash/current/running-logstash-command-line.html#command-line-flags](https://www.elastic.co/guide/en/logstash/current/running-logstash-command-line.html#command-line-flags)).
+
+
+
+## Reading JSON-formatted text from files 
+
 
 The configuration file for logstash is shown below:
 ```
