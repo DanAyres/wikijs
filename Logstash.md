@@ -2,7 +2,7 @@
 title: Logstash
 description: Using logstash to pasre Symetrica log data
 published: true
-date: 2020-07-16T16:45:25.779Z
+date: 2020-07-16T16:53:10.751Z
 tags: elastic search, logstash
 editor: markdown
 ---
@@ -10,6 +10,10 @@ editor: markdown
 
 # logstash
 
+> We assume that logstash, elasticsearch and kibana are installed and configured for this tutorial. See [here](/elk_stack) for instructions on installing the elastic stack.
+{.is-warning}
+
+## Introduction
 [Logstash]([https://www.elastic.co/guide/en/logstash/current/introduction.html](https://www.elastic.co/guide/en/logstash/current/introduction.html)) is an open source data collection engine with real-time pipelining capabilities. From the diagram we can see that a logstash consists of three components or stages:
 
 - [Inputs](https://www.elastic.co/guide/en/logstash/current/input-plugins.html): a number of input plugins are available to parse logs and data from a variety of sources. Some are targted at specific data sources such as Amazon S3 and other will read input from files and TCP/Unix/Web sockets etc. 
@@ -24,7 +28,10 @@ The aim of this tutorial is to learn how to ingest longterm health records from 
 - Data set 1 (JSON events in a text file)
 - Reading JSON from a file and outputing to standard output
 
-## Running logstash
+## Useful Resources
+
+# Running logstash
+
 
 Make sure logstash is installed. For the purposes of testing, we will be invoking logstash directly to debug the configuration.  The following bash script is used to invoke logstash:
 ```
