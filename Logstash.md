@@ -2,7 +2,7 @@
 title: Logstash
 description: Using logstash to pasre Symetrica log data
 published: true
-date: 2020-07-16T10:55:15.887Z
+date: 2020-07-16T16:32:18.371Z
 tags: elastic search, logstash
 editor: markdown
 ---
@@ -10,11 +10,20 @@ editor: markdown
 
 # logstash
 
-[Logstash]([https://www.elastic.co/guide/en/logstash/current/introduction.html](https://www.elastic.co/guide/en/logstash/current/introduction.html)) is an open source data collection engine with real-time pipelining capabilities.  
+[Logstash]([https://www.elastic.co/guide/en/logstash/current/introduction.html](https://www.elastic.co/guide/en/logstash/current/introduction.html)) is an open source data collection engine with real-time pipelining capabilities. From the diagram we can see that a logstash consists of three components or stages:
+
+- [Inputs](https://www.elastic.co/guide/en/logstash/current/input-plugins.html): a number of input plugins are available to parse logs and data from a variety of sources. Some are targted at specific data sources such as Amazon S3 and other will read input from files and TCP/Unix/Web sockets etc. 
+- [Filters](https://www.elastic.co/guide/en/logstash/current/filter-plugins.html) (optional) are used to manipulate the input data. For instance, regular expressions can be used to pick certain values, data can be assumed to be deliminted by a certain character, certain date formats can be search for etc.
+- [Outputs](https://www.elastic.co/guide/en/logstash/current/output-plugins.html) are used to ship data to the destination service.
 
 ![basic_logstash_pipeline.png](/basic_logstash_pipeline.png)
 
-Our ultimate aim in this tutorial is to learn how to ingest longterm health records from Symetrica's detector subsystem 
+The aim of this tutorial is to learn how to ingest longterm health records from Symetrica's detector subsystem. Ultimately we will parse the health records and send data (JSON) to logstash via tcp and then use logstash to output directly to elasticsearch. To learn all of the techniques required, we will invoke logstash directly from the command line (using a bash script) and illustrate these techiques using two very simple data sets. An overview is given below:
+
+- Data set 1 (JSON events in a text file)
+
+
+
 
 ## Reading JSON-formatted text from files 
 
