@@ -2,7 +2,7 @@
 title: Logstash
 description: Using logstash to pasre Symetrica log data
 published: true
-date: 2020-07-16T16:32:18.371Z
+date: 2020-07-16T16:32:37.387Z
 tags: elastic search, logstash
 editor: markdown
 ---
@@ -21,7 +21,7 @@ editor: markdown
 The aim of this tutorial is to learn how to ingest longterm health records from Symetrica's detector subsystem. Ultimately we will parse the health records and send data (JSON) to logstash via tcp and then use logstash to output directly to elasticsearch. To learn all of the techniques required, we will invoke logstash directly from the command line (using a bash script) and illustrate these techiques using two very simple data sets. An overview is given below:
 
 - Data set 1 (JSON events in a text file)
-
+* 
 
 
 
