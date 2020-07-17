@@ -2,7 +2,7 @@
 title: Logstash
 description: Using logstash to pasre Symetrica log data
 published: true
-date: 2020-07-16T16:55:21.974Z
+date: 2020-07-17T07:33:07.369Z
 tags: elastic search, logstash
 editor: markdown
 ---
